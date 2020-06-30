@@ -32,6 +32,18 @@
         <!---------------------- The Main Menu ---------------------->
         <span id="mainMenu">
             <div id="logo">Speak Good</div>
+            <div class="roundTimerInput">
+                <label for="roundTime">Round Length (seconds)</label>
+                <input
+                    type="number"
+                    onchange="changeRoundTime()"
+                    onkeyup="changeRoundTime()"
+                    id="roundTimeInput"
+                    name="roundTime"
+                    value="15"
+                />
+            </div>
+
             <button id="startGameButton" onclick="startGame()">
                 Start Game
             </button>

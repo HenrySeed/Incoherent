@@ -15,6 +15,21 @@ body {
     margin-bottom: 50px;
 }
 
+.roundTimerInput {
+    width: 183px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roundTimerInput > input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #gameMenu {
     margin-top: 20px;
 }

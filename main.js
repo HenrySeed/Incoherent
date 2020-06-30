@@ -1,5 +1,5 @@
 // control panel
-let timeTotal = 10;
+let timeTotal = 15;
 let skipsTotal = 3;
 
 // trackers
@@ -20,6 +20,12 @@ function loadWords() {
 
 function getRandInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+
+function changeRoundTime() {
+    timeTotal = parseInt(document.getElementById("roundTimeInput").value);
+    timeLeft = timeTotal;
+    console.log(timeTotal);
 }
 
 function openState(id) {
@@ -97,9 +103,9 @@ function startTurn() {
     timerInterval = setInterval(function() {
         timeLeft -= 0.25;
         // If the count down is finished, write some text
-        document.getElementById("timerContainer").style.height = `${(timeTotal -
-            timeLeft) *
-            timeTotal}%`;
+        document.getElementById(
+            "timerContainer"
+        ).style.height = `${((timeTotal - timeLeft) / timeTotal) * 100}%`;
         if (timeLeft < -0.25) {
             endTurn();
         }
