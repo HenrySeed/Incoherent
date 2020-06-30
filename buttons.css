@@ -52,6 +52,9 @@ button:active {
 #skipButton:active {
     background-color: #bf5447;
 }
+#skipButton:disabled {
+    background-color: #4a4a4a;
+}
 
 #skipsLeft {
     text-align: center;
