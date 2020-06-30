@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Speak Good</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="loadWords()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="" async defer></script>
+        <script src="words.js" async defer></script>
+        <script src="main.js" async defer></script>
+
+        <span id="mainMenu">
+            <div id="logo">Speak Good</div>
+            <button id="startGameButton" onclick="startGame()">
+                Start Game
+            </button>
+        </span>
+
+        <span id="gameMenu" style="display: none">
+            <div id="roundScoreboard" class="scoreboard"></div>
+            <button onclick="startTurn()" class="centeredButton">
+                Start Turn
+            </button>
+            <button onclick="openMainMenu()" class="centeredButton">
+                Exit Game
+            </button>
+        </span>
+
+        <span id="gameScreen" style="display: none">
+            <div id="timerContainer">
+                <span id="timer"></span>
+                seconds left
+            </div>
+
+            <div id="word"></div>
+            <div id="controlPanel">
+                <span id="skipContainer">
+                    <button onclick="skipWord()" id="skipButton">
+                        Skip Word
+                    </button>
+                    <div id="skipsLeft"></div>
+                </span>
+
+                <button onclick="gotWord()">Got it</button>
+            </div>
+        </span>
+
+        <span id="endScreen" style="display: none">
+            <div class="centeredHeader">You Won!</div>
+            <div id="gameScoreboard" class="scoreboard"></div>
+
+            <button onclick="openMainMenu()" class="centeredButton">
+                Main Menu
+            </button>
+        </span>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background-color: #222222;
+    color: #ffffff;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+button {
+    border: none;
+    background-color: #f59a73;
+    padding: 10px 15px 10px 15px;
+    font-size: 12pt;
+    border-radius: 4px;
+    outline: none;
+}
+
+button:disabled {
+    background-color: #4a4a4a;
+}
+
+#logo {
+    font-size: 32pt;
+    font-family: "Comfortaa", sans-serif;
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 50px;
+}
+
+#gameMenu {
+    margin-top: 20px;
+}
+
+#startGameButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centeredButton {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timerContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#word {
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 24pt;
+    text-align: center;
+}
+
+#controlPanel {
+    width: 187px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#skipContainer {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+#skipsLeft {
+    text-align: center;
+    margin-top: 10px;
+    color: #999;
+}
+
+.scoreboard {
+    min-height: 100px;
+}
+
+.scoreboard > table {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 22px;
+}
+
+.scoreboard > div {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.scoreboard h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.scoreboard td {
+    padding-right: 10px;
+}
+
+.centeredHeader {
+    width: 100%;
+    text-align: center;
+    font-size: 25pt;
+    margin-top: 20px;
+}
