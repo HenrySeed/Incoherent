@@ -92,17 +92,18 @@ function startTurn() {
 
     generateWord();
     // Update the count down every 1 second
-    document.getElementById("timer").innerHTML = timeLeft.toString();
+    document.getElementById("timerContainer").style.height = `0%`;
 
     timerInterval = setInterval(function() {
-        timeLeft -= 1;
+        timeLeft -= 0.25;
         // If the count down is finished, write some text
-        if (timeLeft < 0) {
+        document.getElementById("timerContainer").style.height = `${(timeTotal -
+            timeLeft) *
+            timeTotal}%`;
+        if (timeLeft < -0.25) {
             endTurn();
-        } else {
-            document.getElementById("timer").innerHTML = timeLeft.toString();
         }
-    }, 1000);
+    }, 250);
 }
 
 function endTurn() {

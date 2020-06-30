@@ -1,0 +1,60 @@
+button {
+    border: none;
+    background-color: #f59a73;
+    padding: 12px 17px 12px 17px;
+    font-size: 12pt;
+    border-radius: 4px;
+    outline: none;
+}
+
+button:disabled {
+    background-color: #4a4a4a;
+}
+button:hover {
+    background-color: #faa987;
+}
+
+button:active {
+    background-color: #c46e49;
+}
+
+.centeredButton {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#startGameButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gameButton {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+    height: 90px;
+}
+
+#gotItButton {
+    background-color: #7cff5e;
+}
+#gotItButton:active {
+    background-color: #5fc748;
+}
+
+#skipButton {
+    background-color: #f26b5a;
+}
+#skipButton:active {
+    background-color: #bf5447;
+}
+
+#skipsLeft {
+    text-align: center;
+    margin-top: 10px;
+    color: #52352a;
+}

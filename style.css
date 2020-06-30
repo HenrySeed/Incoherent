@@ -6,21 +6,8 @@ body {
     user-select: none;
 }
 
-button {
-    border: none;
-    background-color: #f59a73;
-    padding: 10px 15px 10px 15px;
-    font-size: 12pt;
-    border-radius: 4px;
-    outline: none;
-}
-
-button:disabled {
-    background-color: #4a4a4a;
-}
-
 #logo {
-    font-size: 32pt;
+    font-size: 48pt;
     font-family: "Comfortaa", sans-serif;
     width: 100%;
     text-align: center;
@@ -32,23 +19,15 @@ button:disabled {
     margin-top: 20px;
 }
 
-#startGameButton {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.centeredButton {
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #timerContainer {
     width: 100%;
-    text-align: center;
-    margin-top: 20px;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(232, 142, 51, 1);
+    z-index: -1;
+    transition: 0.25s;
+    transition-timing-function: linear;
 }
 
 #word {
@@ -61,21 +40,9 @@ button:disabled {
 }
 
 #controlPanel {
-    width: 187px;
+    width: 195px;
     margin-left: auto;
     margin-right: auto;
-}
-
-#skipContainer {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-}
-
-#skipsLeft {
-    text-align: center;
-    margin-top: 10px;
-    color: #999;
 }
 
 .scoreboard {
