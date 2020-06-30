@@ -111,6 +111,7 @@ function endTurn() {
     timeLeft = timeTotal;
     skipsLeft = skipsTotal;
     document.getElementById("skipButton").disabled = false;
+    document.getElementById("startTurnButton").innerHTML = "Next Turn";
     openState("gameMenu");
 
     gameScoreBoard = gameScoreBoard.concat(roundScoreBoard);
@@ -131,6 +132,7 @@ function reset() {
     totalScore = 0;
     roundScoreBoard = [];
     gameScoreBoard = [];
+    document.getElementById("startTurnButton").innerHTML = "Start Turn";
     document.getElementById("roundScoreboard").innerHTML = "";
     document.getElementById("gameScoreboard").innerHTML = "";
 }
