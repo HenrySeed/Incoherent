@@ -26,10 +26,12 @@ function getRandInt(max) {
 function changeRoundTime() {
     timeTotal = parseInt(document.getElementById("roundTimeInput").value);
     document.getElementById("roundTimeTotalShower").innerHTML = timeTotal;
+    document.getElementById("roundInputPreview").innerHTML = timeTotal;
     timeLeft = timeTotal;
 }
 function changeGameLength() {
     scoreTotal = parseInt(document.getElementById("gameLengthInput").value);
+    document.getElementById("gameInputPreview").innerHTML = scoreTotal;
     document.getElementById("winningPointTotalShower").innerHTML = scoreTotal;
 }
 

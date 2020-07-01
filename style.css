@@ -5,6 +5,13 @@ body {
     font-family: sans-serif;
     user-select: none;
     font-family: "Open Sans", sans-serif;
+    touch-action: manipulation;
+    font-size: 16px;
+}
+
+input,
+select {
+    font-size: 100%;
 }
 
 #logo {
@@ -14,6 +21,15 @@ body {
     text-align: center;
     margin-top: 10%;
     margin-bottom: 40px;
+}
+
+.sliderControlContainer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
 }
 
 .roundTimerInput label,
@@ -32,7 +48,6 @@ body {
 
 .roundTimerInput > input,
 .gameLengthInput > input {
-    display: block;
     margin-top: 5px;
     margin-bottom: 50px;
     margin-left: auto;

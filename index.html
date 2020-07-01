@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Speak Good</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="buttons.css" />
@@ -38,26 +38,38 @@
             <div id="logo">Speak Good</div>
             <div class="roundTimerInput">
                 <label for="roundTime">Round Length (seconds)</label>
-                <input
-                    type="number"
+                <div class="sliderControlContainer">
+                    <input
+                    type="range"
                     onchange="changeRoundTime()"
                     onkeyup="changeRoundTime()"
                     id="roundTimeInput"
                     name="roundTime"
                     value="15"
+                    min="10" 
+                    max="60"
                 />
+                <span id="roundInputPreview">15</span>
+                </div>
+               
             </div>
 
             <div class="gameLengthInput">
                 <label for="gameLength">Winning Point Number</label>
-                <input
-                    type="number"
+                <div class="sliderControlContainer">
+                    <input
+                    type="range"
                     onchange="changeGameLength()"
                     onkeyup="changeGameLength()"
                     id="gameLengthInput"
                     name="gameLength"
                     value="30"
+                    min="10" 
+                    max="200"
                 />
+                <span id="gameInputPreview">30</span>
+                </div>
+                
             </div>
 
             <button id="startGameButton" class="centeredButton" onclick="startGame()">
