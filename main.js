@@ -1,6 +1,7 @@
 // control panel
 let timeTotal = 15;
 let skipsTotal = 3;
+let scoreTotal = 30;
 
 // trackers
 let nounDictionary = [];
@@ -24,8 +25,12 @@ function getRandInt(max) {
 
 function changeRoundTime() {
     timeTotal = parseInt(document.getElementById("roundTimeInput").value);
+    document.getElementById("roundTimeTotalShower").innerHTML = timeTotal;
     timeLeft = timeTotal;
-    console.log(timeTotal);
+}
+function changeGameLength() {
+    scoreTotal = parseInt(document.getElementById("gameLengthInput").value);
+    document.getElementById("winningPointTotalShower").innerHTML = scoreTotal;
 }
 
 function openState(id) {
@@ -33,6 +38,7 @@ function openState(id) {
     document.getElementById("gameMenu").style.display = "none";
     document.getElementById("gameScreen").style.display = "none";
     document.getElementById("endScreen").style.display = "none";
+    document.getElementById("introScreen").style.display = "none";
 
     document.getElementById(id).style.display = "block";
 }
@@ -85,7 +91,7 @@ function printGameScoreBoard() {
 }
 
 function startGame() {
-    openState("gameMenu");
+    openState("introScreen");
 }
 
 function startTurn() {
@@ -122,7 +128,7 @@ function endTurn() {
 
     gameScoreBoard = gameScoreBoard.concat(roundScoreBoard);
     totalScore += gameScoreBoard.filter(val => val.correct).length;
-    if (totalScore >= 10) {
+    if (totalScore >= scoreTotal) {
         endGame();
     }
 

@@ -4,6 +4,7 @@ body {
     color: #ffffff;
     font-family: sans-serif;
     user-select: none;
+    font-family: "Open Sans", sans-serif;
 }
 
 #logo {
@@ -15,23 +16,41 @@ body {
     margin-bottom: 50px;
 }
 
-.roundTimerInput {
-    width: 183px;
+.roundTimerInput label,
+.gameLengthInput label {
+    text-align: center;
+    display: block;
+}
+
+.roundTimerInput,
+.gameLengthInput {
+    width: 193px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.roundTimerInput > input {
+.roundTimerInput > input,
+.gameLengthInput > input {
     display: block;
     margin-top: 5px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 #gameMenu {
     margin-top: 20px;
+}
+
+#introScreen > p {
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    margin-top: 20%;
 }
 
 #timerContainer {
@@ -39,7 +58,7 @@ body {
     height: 0%;
     position: absolute;
     bottom: 0;
-    background-color: rgba(232, 142, 51, 1);
+    background-color: #444444;
     z-index: -1;
     transition: 0.25s;
     transition-timing-function: linear;

@@ -10,7 +10,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Speak Good</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="buttons.css" />
     </head>
@@ -25,8 +26,11 @@
             href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
             rel="stylesheet"
         />
-        <script src="" async defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
         <script src="words.js" async defer></script>
+        <script src="onpageUnload.js" async defer></script>
         <script src="main.js" async defer></script>
 
         <!---------------------- The Main Menu ---------------------->
@@ -44,8 +48,39 @@
                 />
             </div>
 
-            <button id="startGameButton" onclick="startGame()">
+            <div class="gameLengthInput">
+                <label for="gameLength">Winning Point Number</label>
+                <input
+                    type="number"
+                    onchange="changeGameLength()"
+                    onkeyup="changeGameLength()"
+                    id="gameLengthInput"
+                    name="gameLength"
+                    value="30"
+                />
+            </div>
+
+            <button id="startGameButton" class="centeredButton" onclick="startGame()">
                 Start Game
+            </button>
+        </span>
+
+        <!---------------------- The Intro Screen ---------------------->
+        <span id="introScreen" style="display: none">
+            <p>
+                Working in pairs you have to make your partner guess the word on your screen without saying it. <br\>
+                Each round they will have <em><span id="roundTimeTotalShower">15</span></em> seconds to guess as many words as possible.<br\>
+                The first team to <em><span id="winningPointTotalShower">30</span></em> points, wins the game<br\>
+            </p>
+            <button
+                onclick="startTurn()"
+                class="centeredButton"
+                id="startTurnButton"
+            >
+                Start Turn
+            </button>
+            <button onclick="openMainMenu()" class="centeredButton" id="skipButton">
+                Exit Game
             </button>
         </span>
 
@@ -57,9 +92,9 @@
                 class="centeredButton"
                 id="startTurnButton"
             >
-                Start Turn
+                Next Turn
             </button>
-            <button onclick="openMainMenu()" class="centeredButton">
+            <button onclick="openMainMenu()" class="centeredButton" id="skipButton">
                 Exit Game
             </button>
         </span>

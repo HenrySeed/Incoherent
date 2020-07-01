@@ -1,21 +1,31 @@
 button {
     border: none;
-    background-color: #f59a73;
+    background: rgb(12, 76, 190);
+    background: linear-gradient(
+        34deg,
+        rgba(12, 76, 190, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    font-weight: 600;
     padding: 12px 17px 12px 17px;
     font-size: 12pt;
     border-radius: 4px;
     outline: none;
+    color: #ffffff;
+    font-size: 14pt;
+    letter-spacing: 0.1em;
+    cursor: pointer;
 }
 
 button:disabled {
     background-color: #4a4a4a;
 }
 button:hover {
-    background-color: #faa987;
+    background-color: #3f99fc;
 }
 
 button:active {
-    background-color: #c46e49;
+    background-color: #044c9b;
 }
 
 .centeredButton {
@@ -23,12 +33,8 @@ button:active {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-}
-
-#startGameButton {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 170px;
+    height: 60px;
 }
 
 .gameButton {
@@ -39,21 +45,14 @@ button:active {
     height: 90px;
 }
 
-#gotItButton {
-    background-color: #7cff5e;
-}
-#gotItButton:active {
-    background-color: #5fc748;
-}
-
 #skipButton {
-    background-color: #f26b5a;
+    background: #f26b5a;
 }
 #skipButton:active {
-    background-color: #bf5447;
+    background: #bf5447;
 }
 #skipButton:disabled {
-    background-color: #4a4a4a;
+    background: #4a4a4a;
 }
 
 #skipsLeft {
