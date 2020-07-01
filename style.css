@@ -12,8 +12,8 @@ body {
     font-family: "Comfortaa", sans-serif;
     width: 100%;
     text-align: center;
-    margin-top: 15%;
-    margin-bottom: 50px;
+    margin-top: 10%;
+    margin-bottom: 40px;
 }
 
 .roundTimerInput label,
@@ -38,6 +38,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+}
+
+#startGameButton {
+    margin-top: 40px;
 }
 
 #gameMenu {

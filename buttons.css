@@ -21,11 +21,19 @@ button:disabled {
     background-color: #4a4a4a;
 }
 button:hover {
-    background-color: #3f99fc;
+    background: linear-gradient(
+        34deg,
+        rgb(23, 94, 216) 0%,
+        rgb(83, 226, 255) 100%
+    );
 }
 
 button:active {
-    background-color: #044c9b;
+    background: linear-gradient(
+        34deg,
+        rgb(12, 69, 169) 0%,
+        rgb(1, 191, 230) 100%
+    );
 }
 
 .centeredButton {
@@ -45,13 +53,16 @@ button:active {
     height: 90px;
 }
 
-#skipButton {
+.redButton {
     background: #f26b5a;
 }
-#skipButton:active {
+.redButton:hover {
+    background: #f48078;
+}
+.redButton:active {
     background: #bf5447;
 }
-#skipButton:disabled {
+.redButton:disabled {
     background: #4a4a4a;
 }
 

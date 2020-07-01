@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Speak Good</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="buttons.css" />
@@ -79,7 +79,7 @@
             >
                 Start Turn
             </button>
-            <button onclick="openMainMenu()" class="centeredButton" id="skipButton">
+            <button onclick="openMainMenu()" class="centeredButton redButton">
                 Exit Game
             </button>
         </span>
@@ -94,7 +94,7 @@
             >
                 Next Turn
             </button>
-            <button onclick="openMainMenu()" class="centeredButton" id="skipButton">
+            <button onclick="openMainMenu()" class="centeredButton redButton">
                 Exit Game
             </button>
         </span>
@@ -108,7 +108,7 @@
                 <button onclick="gotWord()" class="gameButton" id="gotItButton">
                     Got it
                 </button>
-                <button onclick="skipWord()" class="gameButton" id="skipButton">
+                <button onclick="skipWord()" class="gameButton redButton" id="skipButton">
                     Skip Word
                     <div id="skipsLeft"></div>
                 </button>
