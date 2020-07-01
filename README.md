@@ -1,4 +1,4 @@
-# SpeakGood
+# Incoherent
 
 A simpler version, of that _other game_. As the timer counts down, the screen changes from grey to a slightly lighter grey.
 
