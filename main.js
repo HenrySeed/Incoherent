@@ -71,8 +71,8 @@ function gotWord() {
 function genScoreBoard(scoreBoard) {
     let rows = scoreBoard.map(
         val =>
-            `<td>${val.word}</td><td>${
-                val.correct ? "Correct" : "Skipped"
+            `<td class="${val.correct ? "blueScore" : "redScore"}">${val.word}${
+                val.correct ? "" : " (skipped)"
             }</td>`
     );
     let boardHTML = rows.map(val => `<tr>${val}</tr>`).join("");

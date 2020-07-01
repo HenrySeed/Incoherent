@@ -109,6 +109,15 @@ select {
     line-height: 22px;
 }
 
+.scoreboard .blueScore {
+    color: rgb(68, 177, 255);
+    font-weight: 600;
+}
+.scoreboard .redScore {
+    color: #656565;
+    font-weight: 600;
+}
+
 .scoreboard > div {
     width: 100%;
     text-align: center;
