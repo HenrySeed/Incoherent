@@ -129,7 +129,7 @@ function endTurn() {
     openState("gameMenu");
 
     gameScoreBoard = gameScoreBoard.concat(roundScoreBoard);
-    totalScore += gameScoreBoard.filter(val => val.correct).length;
+    totalScore += roundScoreBoard.filter(val => val.correct).length;
     if (totalScore >= scoreTotal) {
         endGame();
     }
