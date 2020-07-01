@@ -770,3 +770,5 @@ const people = [
     "Brad Pitt",
     "Stephen King"
 ];
+
+const allwords = people.concat(nouns);

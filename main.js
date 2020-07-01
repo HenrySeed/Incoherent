@@ -16,7 +16,7 @@ let roundScoreBoard = [];
 let timerInterval;
 
 function loadWords() {
-    nounDictionary = nouns.slice(0);
+    nounDictionary = allwords.slice(0);
 }
 
 function getRandInt(max) {
@@ -46,7 +46,7 @@ function openState(id) {
 }
 
 function generateWord() {
-    if (nounDictionary.length === 0) nounDictionary = nouns.slice(0);
+    if (nounDictionary.length === 0) nounDictionary = allwords.slice(0);
     newWord = nounDictionary.splice(getRandInt(nounDictionary.length), 1)[0];
     document.getElementById("word").innerHTML = newWord;
 }
