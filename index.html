@@ -44,6 +44,14 @@
         <!---------------------- The Main Menu ---------------------->
         <span id="mainMenu">
             <img id="logo" src="logo.svg"></img>
+            <div class="gameLengthInput">
+                <label for="gameLength">Winning Score</label>
+                <div class="inputControlPanel">
+                    <span class="downButton redButton" onclick="changeWinPoint(-5)">-5</span>
+                    <span id="gameInputPreview">30</span>
+                    <span class="upButton blueButton" onclick="changeWinPoint(5)">+5</span>
+                </div>
+            </div>
             <div class="roundTimerInput">
                 <label for="roundTime">Round Length (seconds)</label>
                 <div class="inputControlPanel">
@@ -53,14 +61,7 @@
                 </div>
             </div>
 
-            <div class="gameLengthInput">
-                <label for="gameLength">Winning Point Number</label>
-                <div class="inputControlPanel">
-                    <span class="downButton redButton" onclick="changeWinPoint(-5)">-5</span>
-                    <span id="gameInputPreview">30</span>
-                    <span class="upButton blueButton" onclick="changeWinPoint(5)">+5</span>
-                </div>
-            </div>
+  
 
             <button id="startGameButton" class="centeredButton" onclick="startGame()">
                 Start Game
