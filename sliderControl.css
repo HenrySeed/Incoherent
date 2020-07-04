@@ -1,0 +1,38 @@
+.inputControlPanel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#gameInputPreview {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#roundInputPreview {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-weight: 600;
+}
+
+.downButton {
+    margin-left: 10px;
+    background-color: #f26b5a;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+}
+
+.upButton {
+    background-color: #3d88d8;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+}

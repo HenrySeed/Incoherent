@@ -20,6 +20,7 @@
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="buttons.css" />
+        <link rel="stylesheet" href="sliderControl.css" />
     </head>
     <body onload="loadWords()">
         <!--[if lt IE 7]>
@@ -37,6 +38,7 @@
 
         <script src="words.js" async defer></script>
         <script src="onpageUnload.js" async defer></script>
+        <script src="sliderControl.js" async defer></script>
         <script src="main.js" async defer></script>
 
         <!---------------------- The Main Menu ---------------------->
@@ -44,38 +46,20 @@
             <img id="logo" src="logo.svg"></img>
             <div class="roundTimerInput">
                 <label for="roundTime">Round Length (seconds)</label>
-                <div class="sliderControlContainer">
-                    <input
-                    type="range"
-                    onchange="changeRoundTime()"
-                    onkeyup="changeRoundTime()"
-                    id="roundTimeInput"
-                    name="roundTime"
-                    value="15"
-                    min="10" 
-                    max="60"
-                />
-                <span id="roundInputPreview">15</span>
+                <div class="inputControlPanel">
+                    <span class="downButton" onclick="changeRoundLength(-5)">-5</span>
+                    <span id="roundInputPreview">15</span>
+                    <span class="upButton" onclick="changeRoundLength(5)">+5</span>
                 </div>
-               
             </div>
 
             <div class="gameLengthInput">
                 <label for="gameLength">Winning Point Number</label>
-                <div class="sliderControlContainer">
-                    <input
-                    type="range"
-                    onchange="changeGameLength()"
-                    onkeyup="changeGameLength()"
-                    id="gameLengthInput"
-                    name="gameLength"
-                    value="30"
-                    min="10" 
-                    max="200"
-                />
-                <span id="gameInputPreview">30</span>
+                <div class="inputControlPanel">
+                    <span class="downButton" onclick="changeWinPoint(-5)">-5</span>
+                    <span id="gameInputPreview">30</span>
+                    <span class="upButton" onclick="changeWinPoint(5)">+5</span>
                 </div>
-                
             </div>
 
             <button id="startGameButton" class="centeredButton" onclick="startGame()">
@@ -112,7 +96,7 @@
             >
                 Next Turn
             </button>
-            <button onclick="openMainMenu()" class="centeredButton redButton">
+            <button onclick="openMainMenu(true)" class="centeredButton redButton">
                 Exit Game
             </button>
         </span>

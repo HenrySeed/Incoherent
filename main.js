@@ -23,18 +23,6 @@ function getRandInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function changeRoundTime() {
-    timeTotal = parseInt(document.getElementById("roundTimeInput").value);
-    document.getElementById("roundTimeTotalShower").innerHTML = timeTotal;
-    document.getElementById("roundInputPreview").innerHTML = timeTotal;
-    timeLeft = timeTotal;
-}
-function changeGameLength() {
-    scoreTotal = parseInt(document.getElementById("gameLengthInput").value);
-    document.getElementById("gameInputPreview").innerHTML = scoreTotal;
-    document.getElementById("winningPointTotalShower").innerHTML = scoreTotal;
-}
-
 function openState(id) {
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("gameMenu").style.display = "none";
@@ -151,7 +139,16 @@ function reset() {
     document.getElementById("gameScoreboard").innerHTML = "";
 }
 
-function openMainMenu() {
+function openMainMenu(warn = false) {
+    if (warn) {
+        if (
+            !confirm(
+                "Are you sure you want to quit the game? You can't resume later."
+            )
+        ) {
+            return;
+        }
+    }
     reset();
     openState("mainMenu");
 }
