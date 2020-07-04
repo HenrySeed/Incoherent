@@ -5,6 +5,7 @@ function changeRoundLength(amount) {
     } else if (timeTotal > 180) {
         timeTotal = 180;
     }
+    timeLeft = timeTotal;
     document.getElementById("roundTimeTotalShower").innerHTML = timeTotal;
     document.getElementById("roundInputPreview").innerHTML = timeTotal;
 }

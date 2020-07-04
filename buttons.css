@@ -1,11 +1,6 @@
 button {
     border: none;
-    background: rgb(12, 76, 190);
-    background: linear-gradient(
-        34deg,
-        rgba(12, 76, 190, 1) 0%,
-        rgba(0, 212, 255, 1) 100%
-    );
+    background-color: #368ddd;
     font-weight: 600;
     padding: 12px 17px 12px 17px;
     font-size: 12pt;
@@ -21,19 +16,11 @@ button:disabled {
     background-color: #4a4a4a;
 }
 button:hover {
-    background: linear-gradient(
-        34deg,
-        rgb(23, 94, 216) 0%,
-        rgb(83, 226, 255) 100%
-    );
+    background-color: #5ba5e8;
 }
 
 button:active {
-    background: linear-gradient(
-        34deg,
-        rgb(12, 69, 169) 0%,
-        rgb(1, 191, 230) 100%
-    );
+    background-color: #357cbc;
 }
 
 .centeredButton {
@@ -63,7 +50,20 @@ button:active {
     background: #bf5447;
 }
 .redButton:disabled {
-    background: #4a4a4a;
+    background: #4b4a4a;
+}
+
+.blueButton {
+    background: #368ddd;
+}
+.blueButton:hover {
+    background: #5ba5e8;
+}
+.blueButton:active {
+    background: #357cbc;
+}
+.blueButton:disabled {
+    background: #4b4a4a;
 }
 
 #skipsLeft {
