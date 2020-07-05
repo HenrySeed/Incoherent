@@ -41,6 +41,7 @@ button:active {
 }
 
 .redButton {
+    cursor: pointer;
     background: #f26b5a;
 }
 .redButton:hover {
@@ -54,6 +55,7 @@ button:active {
 }
 
 .blueButton {
+    cursor: pointer;
     background: #368ddd;
 }
 .blueButton:hover {
