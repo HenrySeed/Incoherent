@@ -47,17 +47,17 @@
             <div class="gameLengthInput">
                 <label for="gameLength">Winning Score</label>
                 <div class="inputControlPanel">
-                    <span class="downButton redButton" onclick="changeWinPoint(-5)">-5</span>
+                    <button id="winningScoreDown" class="downButton redButton" onclick="changeWinPoint(-5)">-5</button>
                     <span id="gameInputPreview">30</span>
-                    <span class="upButton blueButton" onclick="changeWinPoint(5)">+5</span>
+                    <button id="winningScoreUp" class="upButton blueButton" onclick="changeWinPoint(5)">+5</button>
                 </div>
             </div>
             <div class="roundTimerInput">
                 <label for="roundTime">Round Length (seconds)</label>
                 <div class="inputControlPanel">
-                    <span class="downButton redButton" onclick="changeRoundLength(-5)">-5</span>
+                    <button id="roundTimeDown" class="downButton redButton" onclick="changeRoundLength(-5)">-5</button>
                     <span id="roundInputPreview">15</span>
-                    <span class="upButton blueButton" onclick="changeRoundLength(5)">+5</span>
+                    <button id="roundTimeUp" class="upButton blueButton" onclick="changeRoundLength(5)">+5</button>
                 </div>
             </div>
 
