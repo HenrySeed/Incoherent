@@ -10,17 +10,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Incoherant</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f26b5a">
-        <meta name="msapplication-TileColor" content="#222222">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="buttons.css" />
-        <link rel="stylesheet" href="sliderControl.css" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="meta/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="meta/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="meta/favicon-16x16.png"
+        />
+        <link rel="manifest" href="meta/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="meta/safari-pinned-tab.svg"
+            color="#f26b5a"
+        />
+        <meta name="msapplication-TileColor" content="#222222" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/buttons.css" />
+        <link rel="stylesheet" href="style/sliderControl.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body onload="loadWords()">
         <!--[if lt IE 7]>
@@ -29,41 +60,61 @@
                 <a href="#">upgrade your browser</a> to improve your experience.
             </p>
         <![endif]-->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
-            rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-
-        <script src="words.js" async defer></script>
-        <script src="onpageUnload.js" async defer></script>
-        <script src="sliderControl.js" async defer></script>
-        <script src="main.js" async defer></script>
+        <script src="src/words.js" async defer></script>
+        <script src="src/onpageUnload.js" async defer></script>
+        <script src="src/sliderControl.js" async defer></script>
+        <script src="src/main.js" async defer></script>
 
         <!---------------------- The Main Menu ---------------------->
         <span id="mainMenu">
-            <img id="logo" src="logo.svg"></img>
+            <img id="logo" src="res/logo.svg" />
             <div class="gameLengthInput">
                 <label for="gameLength">Winning Score</label>
                 <div class="inputControlPanel">
-                    <button id="winningScoreDown" class="downButton redButton" onclick="changeWinPoint(-5)">-5</button>
+                    <button
+                        id="winningScoreDown"
+                        class="downButton redButton"
+                        onclick="changeWinPoint(-5)"
+                    >
+                        -5
+                    </button>
                     <span id="gameInputPreview">30</span>
-                    <button id="winningScoreUp" class="upButton blueButton" onclick="changeWinPoint(5)">+5</button>
+                    <button
+                        id="winningScoreUp"
+                        class="upButton blueButton"
+                        onclick="changeWinPoint(5)"
+                    >
+                        +5
+                    </button>
                 </div>
             </div>
             <div class="roundTimerInput">
                 <label for="roundTime">Round Length (seconds)</label>
                 <div class="inputControlPanel">
-                    <button id="roundTimeDown" class="downButton redButton" onclick="changeRoundLength(-5)">-5</button>
+                    <button
+                        id="roundTimeDown"
+                        class="downButton redButton"
+                        onclick="changeRoundLength(-5)"
+                    >
+                        -5
+                    </button>
                     <span id="roundInputPreview">15</span>
-                    <button id="roundTimeUp" class="upButton blueButton" onclick="changeRoundLength(5)">+5</button>
+                    <button
+                        id="roundTimeUp"
+                        class="upButton blueButton"
+                        onclick="changeRoundLength(5)"
+                    >
+                        +5
+                    </button>
                 </div>
             </div>
 
-  
-
-            <button id="startGameButton" class="centeredButton" onclick="startGame()">
+            <button
+                id="startGameButton"
+                class="centeredButton"
+                onclick="startGame()"
+            >
                 Start Game
             </button>
         </span>
@@ -71,9 +122,17 @@
         <!---------------------- The Intro Screen ---------------------->
         <span id="introScreen" style="display: none">
             <p>
-                Working in pairs you have to make your partner guess the word on your screen without saying it. <br\>
-                Each round they will have <em><span id="roundTimeTotalShower">15</span></em> seconds to guess as many words as possible.<br\>
-                The first team to <em><span id="winningPointTotalShower">30</span></em> points, wins the game<br\>
+                Working in pairs you have to make your partner guess the word on
+                your screen without saying it.
+            </p>
+            <p>
+                Each round they will have
+                <em id="roundTimeTotalShower">15</em> seconds to guess as many
+                words as possible.
+            </p>
+            <p>
+                The first team to
+                <em id="winningPointTotalShower">30</em> points, wins the game
             </p>
             <button
                 onclick="startTurn()"
@@ -97,7 +156,10 @@
             >
                 Next Turn
             </button>
-            <button onclick="openMainMenu(true)" class="centeredButton redButton">
+            <button
+                onclick="openMainMenu(true)"
+                class="centeredButton redButton"
+            >
                 Exit Game
             </button>
         </span>
@@ -111,7 +173,11 @@
                 <button onclick="gotWord()" class="gameButton" id="gotItButton">
                     Got it
                 </button>
-                <button onclick="skipWord()" class="gameButton redButton" id="skipButton">
+                <button
+                    onclick="skipWord()"
+                    class="gameButton redButton"
+                    id="skipButton"
+                >
                     Skip Word
                     <div id="skipsLeft"></div>
                 </button>
